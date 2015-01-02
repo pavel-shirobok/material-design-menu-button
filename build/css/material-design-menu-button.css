@@ -1,0 +1,60 @@
+.md-menu-button {
+  box-sizing: content-box;
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  font-size: inherit;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, #ffffff 40.1%, #ffffff 59.9%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, #ffffff 40.1%, #ffffff 59.9%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  /* Bread parts of burger! */
+}
+.md-menu-button:checked {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.md-menu-button:after,
+.md-menu-button:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 0.2em;
+  background: white;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.md-menu-button:before {
+  top: 0.1em;
+  left: 0;
+}
+.md-menu-button:after {
+  bottom: 0.1em;
+  left: 0;
+}
+.md-menu-button:checked:before,
+.md-menu-button:checked:after {
+  width: 0.9em;
+  left: 0.3em;
+}
+.md-menu-button:checked:before {
+  top: 0.15em;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.md-menu-button:checked:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0.15em;
+}
