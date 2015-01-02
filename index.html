@@ -30,6 +30,8 @@
             width: 1em;
             height: 1em;
             box-sizing: content-box;
+
+            -webkit-transition: all 0.5s ease;
         }
 
         .menu:after, .menu:before{
@@ -39,25 +41,40 @@
             display: block;
             background: white;
             width: 1em;
+
+            -webkit-transition: all 0.5s ease;
         }
 
         .menu:before {
             top : 0.1em;
             left: 0;
-
-            border : 0 solid transparent;
-
-            border-top-right-radius: 0.1em;
-            border-top-left-radius: 0.1em;
         }
 
         .menu:after{
             bottom: 0.1em;
             left: 0;
-
-            border-bottom-right-radius: 0.1em;
-            border-bottom-left-radius: 0.1em;
         }
+
+        .menu:checked {
+            -webkit-transform: rotate(-180deg);
+        }
+
+        .menu:checked:before, .menu:checked:after{
+            width: 0.9em;
+            left: 0.3em;
+        }
+
+        .menu:checked:before {
+            top : 0.15em;
+            -webkit-transform: rotate(45deg);
+        }
+
+        .menu:checked:after {
+            -webkit-transform: rotate(-45deg);
+            bottom: 0.15em;
+        }
+
+
 
     </style>
 </head>
