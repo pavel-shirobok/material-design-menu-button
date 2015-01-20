@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MdButtonTest">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Material design menu button test</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/material-design-menu-button.css"/>
 </head>
 
 
+
 <body style="background: darkseagreen" >
-<input style="font-size: 10px; margin: 10px" class="md-menu-button" type="checkbox">
+<div class="container">
+    <div class="jumbotron">
+        <h1>Menu button test page</h1>
+        <p>Menu buttons pretty like in android. Without any JS. Only css3 only hard-core</p>
+    </div>
+
+    <div ng-controller="SizeController">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" ng-repeat="size in sizes" ng-click="select(size)">{{size}}px</button>
+        </div>
+        <hr/>
+        <br>Simple(in one input) <md-menu-button style="vertical-align: middle; margin:5px" size="{{currentSize+'px'}}"></md-menu-button>
+        <hr/>
+        <br>Complex(with ink animation) <md-menu-button-x style="vertical-align: middle; margin:5px" size="{{currentSize+'px'}}"></md-menu-button-x>
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+
+<!--<input style="font-size: 10px; margin: 10px" class="md-menu-button" type="checkbox">
 <input style="font-size: 20px; margin: 10px" class="md-menu-button" type="checkbox"/>
 <input style="font-size: 30px; margin: 10px" class="md-menu-button" type="checkbox"/>
 
@@ -31,8 +58,13 @@
     <div>
         <div up></div><div mid></div><div down></div>
     </div>
-</label>
+</label>-->
 
+    <script src="js/prefixfree.js"></script>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
